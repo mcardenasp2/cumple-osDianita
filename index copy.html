@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños 🎀</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffb6c1, #ffdde1);
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            color: #ff69b4;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+        button {
+            background: #ff69b4;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .music-player {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz Cumpleaños, [Nombre]! 🎀🎂</h1>
+        <p class="message">💖 Que este día esté lleno de alegría, amor y muchas sonrisas kawaii. 🎉</p>
+        <p class="message">🎁 Espero que todos tus sueños se hagan realidad y que tengas un día maravilloso.</p>
+        <button onclick="enviarMensaje()">Enviar un Mensaje 💌</button>
+        <div class="music-player">
+            <p>🎶 Una canción especial para ti:</p>
+            <audio controls>
+                <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio>
+        </div>
+    </div>
+    <script>
+        function enviarMensaje() {
+            alert("¡Mensaje enviado con mucho cariño! 💕");
+        }
+    </script>
+</body>
+</html>
