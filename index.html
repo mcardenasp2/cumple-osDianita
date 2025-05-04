@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="🎀 ¡Feliz Cumpleaños, Dianita! 🎂">
+    <meta property="og:description" content="Una sorpresa llena de cariño, imágenes especiales y música para ti. 💝">
+    <meta property="og:image" content="https://mcardenasp2.github.io/cumple-osDianita/diana4.jpg">
+    <meta property="og:url" content="https://mcardenasp2.github.io/cumple-osDianita/">
+    <meta property="og:type" content="website">
+
     <title>Feliz Cumpleaños Dianita🎀</title>
     <style>
         body {
@@ -26,6 +33,11 @@
         .message {
             font-size: 1.2em;
             margin: 15px 0;
+        }
+        .messageImages {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #4B0082; /* Color morado */
         }
         button {
             background: #ff69b4;
@@ -70,10 +82,12 @@
         <p class="message">💖 Que este día esté lleno de alegría, amor y muchas sonrisas. 🎉</p>
         <p class="message">🎁 Espero que todos tus sueños se hagan realidad y que tengas un día maravilloso.</p>
         <button id="botonMensajes" onclick="cambiarImagen()">Ver Imagen 1 de 3 💌</button>
+        <div id="textoImagen" class="messageImages"></div>
         <div class="image-container">
-            <img id="imagen1" src="1.jpg" alt="Imagen 1">
-            <img id="imagen2" src="3.jpg" alt="Imagen 2">
-            <img id="imagen3" src="4.jpg" alt="Imagen 3">
+            <img id="imagen1" src="diana1.jpg" alt="Imagen 1">
+            <img id="imagen2" src="diana2.jpg" alt="Imagen 2">
+            <img id="imagen3" src="diana3.jpg" alt="Imagen 3">
+
         </div>
         <div class="music-player">
             <p>🎶 Una canción especial para ti:</p>
@@ -86,8 +100,14 @@
     </div>
     <script>
         let contador = 0;
+        const textosImagenes = [
+            "🌸 El poder no esta determinado por el tamaño de tu cuerpo, si no por el tamaño de tu corazón y sueños.",
+            "🎀 No te rindas, el fracaso y las caídas, son una lucha constante hacia el éxito.",
+            "💐 Si dejas que el miedo te detanga Nunca podrás avanzar."
+        ];
         const imagenes = document.querySelectorAll('.image-container img');
         const boton = document.getElementById('botonMensajes');
+        const textoImagen = document.getElementById('textoImagen');
 
         function cambiarImagen() {
             // Ocultar todas las imágenes
@@ -95,6 +115,8 @@
 
             // Mostrar la imagen correspondiente al contador
             imagenes[contador].style.display = 'block';
+
+            textoImagen.textContent = textosImagenes[contador];
 
              // Actualizar el texto del botón
             boton.textContent = `Ver Imagen ${contador + 2} de ${imagenes.length} 💌`;
